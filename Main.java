@@ -57,3 +57,10 @@ class DataSorterApp {
                         compareAll(data);
                     }
                 }
+                case 7 -> System.out.println("Exiting... Goodbye!");
+                default -> System.out.println("Invalid choice. Try again.");
+            }
+        } while (choice != 7);
+        scanner.close();
+    }
+
