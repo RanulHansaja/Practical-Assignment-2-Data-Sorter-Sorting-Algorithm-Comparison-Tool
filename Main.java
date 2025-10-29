@@ -64,3 +64,17 @@ class DataSorterApp {
         scanner.close();
     }
 
+    private void compareAll(int[] data) {
+        System.out.println("\n--- Algorithm Comparison Table ---");
+        System.out.printf("%-15s %-15s %-15s%n", "Algorithm", "Time (ms)", "Steps");
+        System.out.println("----------------------------------------------------");
+
+        Utils.SortResult b = BubbleSort.sort(data);
+        Utils.SortResult m = MergeSort.sort(data);
+        Utils.SortResult q = QuickSort.sort(data);
+
+        System.out.printf("%-15s %-15.3f %-15d%n", "Bubble Sort", b.timeMs, b.steps);
+        System.out.printf("%-15s %-15.3f %-15d%n", "Merge Sort", m.timeMs, m.steps);
+        System.out.printf("%-15s %-15.3f %-15d%n", "Quick Sort", q.timeMs, q.steps);
+    }
+}
