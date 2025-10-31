@@ -7,3 +7,8 @@ public class Main {
     }
 }
 
+class DataSorterApp {
+    public void run() {
+        Utils.ScannerWrapper scanner = new Utils.ScannerWrapper();
+        int[] data = new int[0];
+        int choice;
