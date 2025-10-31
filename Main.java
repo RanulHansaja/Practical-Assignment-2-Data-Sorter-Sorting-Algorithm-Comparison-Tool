@@ -50,3 +50,16 @@ class DataSorterApp {
                         System.out.printf("Time: %.3f ms | Steps: %d%n", res.timeMs, res.steps);
                     }
                 }
+                case 6 -> {
+                    if (data.length == 0) {
+                        System.out.println("⚠ Please enter or generate data first!");
+                    } else {
+                        compareAll(data);
+                    }
+                }
+                case 7 -> System.out.println("Exiting... Goodbye!");
+                default -> System.out.println("Invalid choice. Try again.");
+            }
+        } while (choice != 7);
+        scanner.close();
+    }
