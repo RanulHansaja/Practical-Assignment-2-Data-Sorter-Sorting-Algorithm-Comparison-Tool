@@ -44,3 +44,20 @@ public class Utils {
             }
         }
     }
+    
+    public static int[] getManualInput(ScannerWrapper scanner) {
+        System.out.print("Enter numbers separated by spaces: ");
+        while (true) {
+            try {
+                String line = scanner.nextLine().trim();
+                if (line.isEmpty()) return new int[0];
+                String[] parts = line.split("\\s+");
+                int[] arr = new int[parts.length];
+                for (int i = 0; i < parts.length; i++) arr[i] = Integer.parseInt(parts[i]);
+                System.out.println("✅ Data successfully stored.");
+                return arr;
+            } catch (NumberFormatException e) {
+                System.out.print("Invalid input. Please enter integers only: ");
+            }
+        }
+    }
