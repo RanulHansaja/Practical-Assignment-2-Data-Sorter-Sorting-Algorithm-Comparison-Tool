@@ -61,3 +61,13 @@ public class Utils {
             }
         }
     }
+
+    public static int[] generateRandomList(ScannerWrapper scanner) {
+        int n = getIntInput(scanner, "Enter number of elements to generate: ");
+        Random rand = new Random();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) arr[i] = rand.nextInt(1000);
+        System.out.println("✅ Random dataset generated.");
+        return arr;
+    }
+}
