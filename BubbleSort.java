@@ -14,3 +14,8 @@ public class BubbleSort {
                 }
             }
         }
+        long end = System.nanoTime();
+        double timeMs = (end - start) / 1e6;
+        return new Utils.SortResult(arr, timeMs, steps);
+    }
+}
