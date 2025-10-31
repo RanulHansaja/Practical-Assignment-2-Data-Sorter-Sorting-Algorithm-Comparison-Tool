@@ -32,3 +32,15 @@ public class Utils {
         System.out.println("6. Compare all algorithms (show performance table)");
         System.out.println("7. Exit");
     }
+
+    public static int getIntInput(ScannerWrapper scanner, String prompt) {
+        System.out.print(prompt);
+        while (true) {
+            try {
+                String line = scanner.nextLine().trim();
+                return Integer.parseInt(line);
+            } catch (Exception e) {
+                System.out.print("Please enter a valid integer: ");
+            }
+        }
+    }
